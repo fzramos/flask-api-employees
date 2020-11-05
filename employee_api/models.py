@@ -20,3 +20,18 @@ class Employee(db.Model):
 
     def __repr__(self):
         return f'Added new employee {self.full_name} with the email {self.email} added to the database.'
+
+class EmployeeSchema(ma.Schema):
+    class Meta:
+        # create fields that will show after dat digested
+        fields = ['id', 'full_name', 'job', 'sex', 'email', 'address', 'ssn']
+
+employee_schema = EmployeeSchema()
+# if you want 1 employee
+
+employees_schema = EmployeeSchema(many = True)
+
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return User.query.get(user_id)
+
