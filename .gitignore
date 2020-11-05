@@ -1,0 +1,7 @@
+.env
+.vscode
+**/__pycache__/**
+employee_api_env
+app.db
+migrations
+env_setup.py
