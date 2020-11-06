@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Login for your API key</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.email.label }}
+                {{ form.email(class = 'form-control', placeholder = 'Enter Email') }}
+            </div>         
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password(class = 'form-control', placeholder = 'Enter Password') }}
+            </div>         
+            {{ form.submit() }}
+        </form>
+    </div>
+
+{% endblock %}

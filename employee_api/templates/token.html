@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Here is your API token:</h1>
+        <textarea name="" id="" cols="30" rows="10">
+            {{ token }}
+        </textarea>
+        <h4>Remember, it will only last for 1 hour</h4>
+        <a href="{{ url_for('refresh_token') }}">
+            <button class="btn btn-success">Refresh API</button>
+        </a>
+    </div>
+
+{% endblock %}
